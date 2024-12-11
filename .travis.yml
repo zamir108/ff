@@ -1,0 +1,11 @@
+language: python
+dist: focal
+python:
+  - "3.10"
+
+install:
+  - python3 -m pip install python-telegram-bot
+
+script:
+  - chmod +x *
+  - travis_wait 120 python3 main.py   # Run the second script with a wait of 30 minutes
